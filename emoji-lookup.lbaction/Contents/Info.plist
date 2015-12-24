@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>CFBundleIconFile</key>
+	<string>mag_right.png</string>
+	<key>CFBundleIdentifier</key>
+	<string>com.jasonrudolph.LaunchBar.action.emoji-lookup</string>
+	<key>CFBundleName</key>
+	<string>Emoji Lookup</string>
+	<key>CFBundleVersion</key>
+	<string>0.1.0</string>
+	<key>LBDescription</key>
+	<dict>
+		<key>LBAuthor</key>
+		<string>Jason Rudolph</string>
+		<key>LBSummary</key>
+		<string>Can't remember the exact name of the emoji you're looking for? No problem. Just type whatever comes to mind, and we'll take care of the rest.</string>
+		<key>LBTwitter</key>
+		<string>@jasonrudolph</string>
+		<key>LBWebsite</key>
+		<string>http://jasonrudolph.com</string>
+	</dict>
+	<key>LBMinimumLaunchBarVersion</key>
+	<integer>6</integer>
+	<key>LBScripts</key>
+	<dict>
+		<key>LBDefaultScript</key>
+		<dict>
+			<key>LBKeepWindowActive</key>
+			<true/>
+			<key>LBResultType</key>
+			<string>unknown</string>
+			<key>LBReturnsResult</key>
+			<true/>
+			<key>LBScriptName</key>
+			<string>default.js</string>
+		</dict>
+	</dict>
+	<key>LSMinimumSystemVersion</key>
+	<string>10.11</string>
+</dict>
+</plist>
