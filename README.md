@@ -22,5 +22,13 @@ Launchbar's [built-in emoji action][] is great when you already know the name of
 
 Sometimes you don't know the exact name, but you know a keyword or synonym. With this action, whether you know the exact name or you only know a keyword, you can quickly track down the emoji you want. :ok_hand:
 
+## TODO
+
+- [ ] Use the emoji character as the icon in the result list (instead of the default Launchbar gear icon)
+- [ ] Don't display the keywords in the result list
+    - The current implementation displays the keywords in the result list so that Launchbar will automatically filter the list by keyword as you type
+    - In order to remove the keywords from the result list and retain the ability to filter by keyword, the action probably to needs handle the filtering on its own (with a [suggestions script](https://developer.obdev.at/launchbar-developer-documentation/#suggestions-script)?) instead of relying on Launchbar's default filtering
+- [ ] Add ability to lookup emoji [by category](https://github.com/jasonrudolph/launchbar-emoji-lookup/blob/d25677084e514772a151161c163f8520bac652ee/emoji-lookup.lbaction/Contents/vendor/emojilib-1.1.0/emojis.json#L5)
+
 [launchbar]: https://www.obdev.at/products/launchbar
 [built-in emoji action]: https://cloud.githubusercontent.com/assets/2988/11998255/1d4e026a-aa64-11e5-9b41-98e2244c2696.png
