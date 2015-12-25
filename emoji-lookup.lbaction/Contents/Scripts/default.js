@@ -8,7 +8,7 @@ class EmojiCharacter {
     return this.data['char'];
   }
 
-  get code() {
+  get tag() {
     return ':' + this.name + ':';
   }
 
@@ -30,13 +30,13 @@ class EmojiCharacter {
     return {
       title: this.launchbarItemTitle(),
       action: 'paste',
-      actionArgument: this.characterOrCode(),
+      actionArgument: this.characterOrTag(),
       icon: this.launchbarIcon()
     }
   }
 
   launchbarItemTitle() {
-    return this.code + ' (' + this.keywords.join(', ') + ')';
+    return this.tag + ' (' + this.keywords.join(', ') + ')';
   }
 
   launchbarIcon() {
@@ -48,11 +48,11 @@ class EmojiCharacter {
     }
   }
 
-  characterOrCode() {
+  characterOrTag() {
     if (this.character != null) {
       return this.character;
     } else {
-      return this.code;
+      return this.tag;
     }
   }
 
