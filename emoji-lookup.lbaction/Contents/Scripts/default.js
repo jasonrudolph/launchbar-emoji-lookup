@@ -40,7 +40,12 @@ class EmojiCharacter {
   }
 
   launchbarIcon() {
-    return this.unicodeCodePoint + '.png';
+    var resourcesPath = Action.path + '/Contents/Resources/';
+    if (this.isUnicode()) {
+      return resourcesPath + 'unicode/' + this.unicodeCodePoint + '.png';
+    } else {
+      return resourcesPath + this.name + '.png'
+    }
   }
 
   characterOrCode() {
@@ -49,6 +54,10 @@ class EmojiCharacter {
     } else {
       return this.code;
     }
+  }
+
+  isUnicode() {
+    return this.unicodeCodePoint != null;
   }
 }
 
