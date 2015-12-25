@@ -1,3 +1,8 @@
+All other images
+Copyright (c) 2013 Apple Inc. All rights reserved.
+
+Source code:
+
 Copyright (c) 2015 Jason Rudolph
 
 Permission is hereby granted, free of charge, to any person obtaining

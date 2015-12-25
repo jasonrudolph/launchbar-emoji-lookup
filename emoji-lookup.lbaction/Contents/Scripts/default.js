@@ -16,21 +16,31 @@ class EmojiCharacter {
     return this.data['keywords'];
   }
 
+  get unicodeCodePoint() {
+    if (this.character == null) {
+      return null;
+    } else {
+      var codePointDecimalValue = this.character.codePointAt(0);
+      var codePointHexValue = codePointDecimalValue.toString(16);
+      return codePointHexValue;
+    }
+  }
+
   toLaunchbarItem() {
     return {
       title: this.launchbarItemTitle(),
       action: 'paste',
-      actionArgument: this.characterOrCode()
+      actionArgument: this.characterOrCode(),
+      icon: this.launchbarIcon()
     }
   }
 
   launchbarItemTitle() {
-    var prefix = '';
-    if (this.character != null) {
-      prefix = this.character;
-    }
+    return this.code + ' (' + this.keywords.join(', ') + ')';
+  }
 
-    return prefix + ' ' + this.code + ' (' + this.keywords.join(', ') + ')';
+  launchbarIcon() {
+    return this.unicodeCodePoint + '.png';
   }
 
   characterOrCode() {

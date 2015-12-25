@@ -24,7 +24,7 @@ Sometimes you don't know the exact name, but you know a keyword or synonym. With
 
 ## TODO
 
-- [ ] Use the emoji character as the icon in the result list (instead of the default Launchbar gear icon)
+- [ ] Render emoji character for custom emojis (e.g, `:metal:`, `:neckbeard:`, etc.)
 - [ ] Don't display the keywords in the result list
     - The current implementation displays the keywords in the result list so that Launchbar will automatically filter the list by keyword as you type
     - In order to remove the keywords from the result list and retain the ability to filter by keyword, the action probably to needs handle the filtering on its own (with a [suggestions script](https://developer.obdev.at/launchbar-developer-documentation/#suggestions-script)?) instead of relying on Launchbar's default filtering

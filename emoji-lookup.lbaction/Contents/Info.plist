@@ -3,7 +3,7 @@
 <plist version="1.0">
 <dict>
 	<key>CFBundleIconFile</key>
-	<string>mag_right.png</string>
+	<string>1f50e.png</string>
 	<key>CFBundleIdentifier</key>
 	<string>com.jasonrudolph.LaunchBar.action.emoji-lookup</string>
 	<key>CFBundleName</key>
