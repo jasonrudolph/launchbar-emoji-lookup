@@ -9,7 +9,7 @@
 	<key>CFBundleName</key>
 	<string>Emoji Lookup</string>
 	<key>CFBundleVersion</key>
-	<string>0.2.1</string>
+	<string>0.3.0</string>
 	<key>LBDescription</key>
 	<dict>
 		<key>LBAuthor</key>
@@ -23,7 +23,7 @@
     <key>LBUpdateURL</key>
     <string>https://raw.githubusercontent.com/jasonrudolph/launchbar-emoji-lookup/master/emoji-lookup.lbaction/Contents/Info.plist</string>
     <key>LBChangelog</key>
-    <string>0.2.1: Support action versioning
+    <string>0.3.0: Support action versioning
     0.2.0: Use the emoji character as the icon for native emojis</string>
 	</dict>
 	<key>LBMinimumLaunchBarVersion</key>
