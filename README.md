@@ -2,7 +2,7 @@
 
 A [Launchbar][] action to find the perfect emoji by name or keyword. :mag_right:
 
-![demo](https://cloud.githubusercontent.com/assets/2988/12007908/03c1b770-abe9-11e5-8d93-e971b73662a6.gif)
+![demo](https://cloud.githubusercontent.com/assets/2988/12069451/90bde130-affe-11e5-95ab-cee1615a87b3.gif)
 
 ## Installation
 
