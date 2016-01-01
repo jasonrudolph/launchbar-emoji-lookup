@@ -24,9 +24,6 @@ Sometimes you don't know the exact name, but you know a keyword or synonym. With
 
 ## TODO
 
-- [ ] Don't display the keywords in the result list
-    - The current implementation displays the keywords in the result list so that Launchbar will automatically filter the list by keyword as you type
-    - In order to remove the keywords from the result list and retain the ability to filter by keyword, the action probably to needs handle the filtering on its own (with a [suggestions script](https://developer.obdev.at/launchbar-developer-documentation/#suggestions-script)?) instead of relying on Launchbar's default filtering
 - [ ] Add ability to lookup emoji [by category](https://github.com/jasonrudolph/launchbar-emoji-lookup/blob/d25677084e514772a151161c163f8520bac652ee/emoji-lookup.lbaction/Contents/vendor/emojilib-1.1.0/emojis.json#L5)
 - [ ] Add support for the [new emojis that Apple launched in 2015](http://www.engadget.com/2015/10/21/os-x-10-11-1-and-ios-9-1/) /cc [muan/emojilib#24](https://github.com/muan/emojilib/issues/24)
 
