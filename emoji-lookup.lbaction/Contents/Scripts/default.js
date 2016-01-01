@@ -79,6 +79,6 @@ function paste(character) {
 }
 
 function getEmojiIndex() {
-  path = Action.path + '/Contents/vendor/emojilib-1.1.0/emojis.json';
+  path = Action.path + '/Contents/vendor/emojilib/emojis.json';
   return File.readJSON(path);
 }
