@@ -9,7 +9,7 @@
 	<key>CFBundleName</key>
 	<string>Emoji Lookup</string>
 	<key>CFBundleVersion</key>
-	<string>0.4.0</string>
+	<string>0.5.0</string>
 	<key>LBTextInputTitle</key>
 	<string>Find an emoji by keyword</string>
 	<key>LBDescription</key>
@@ -26,6 +26,7 @@
     <string>https://raw.githubusercontent.com/jasonrudolph/launchbar-emoji-lookup/master/emoji-lookup.lbaction/Contents/Info.plist</string>
     <key>LBChangelog</key>
 		<string>
+			0.5.0: Denote custom/nonstandard emoji in result list
 			0.4.0: Simplify search result display by only outputting the emoji's name and not its long list of keywords
 			0.3.0: Support action versioning
 			0.2.0: Use the emoji character as the icon for native emojis
