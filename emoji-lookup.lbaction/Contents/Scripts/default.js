@@ -31,6 +31,7 @@ class EmojiCharacter {
   toLaunchbarItem() {
     return {
       title: this.launchbarItemTitle(),
+      label: this.launchbarItemLabel(),
       action: 'paste',
       actionArgument: this.characterOrTag(),
       icon: this.launchbarIcon()
@@ -39,6 +40,14 @@ class EmojiCharacter {
 
   launchbarItemTitle() {
     return this.tag;
+  }
+
+  launchbarItemLabel() {
+    if (this.isUnicode()) {
+      return '';
+    } else {
+      return 'custom';
+    }
   }
 
   launchbarIcon() {
