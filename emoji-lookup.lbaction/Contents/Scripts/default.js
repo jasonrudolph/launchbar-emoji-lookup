@@ -38,7 +38,7 @@ class EmojiCharacter {
   }
 
   launchbarItemTitle() {
-    return this.tag;;
+    return this.tag;
   }
 
   launchbarIcon() {
