@@ -118,9 +118,7 @@ function paste(character) {
 //   metadata for that emoji (e.g., the emoji character, the emoji's keywords).
 function getEmojiDictionary() {
   path = Action.path + '/Contents/vendor/emojilib/emojis.json';
-  var dictionary = File.readJSON(path);
-  delete dictionary.keys;
-  return dictionary
+  return File.readJSON(path);
 }
 
 // Returns an Object describing supported search terms and the emojis that are
