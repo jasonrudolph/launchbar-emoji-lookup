@@ -26,7 +26,6 @@ Sometimes you don't know the exact name, but you know a keyword or synonym. With
 
 - [ ] Add support for multi-word search terms (e.g., "joy face")
 - [ ] Add ability to lookup emoji [by category](https://github.com/jasonrudolph/launchbar-emoji-lookup/blob/d25677084e514772a151161c163f8520bac652ee/emoji-lookup.lbaction/Contents/vendor/emojilib-1.1.0/emojis.json#L5)
-- [ ] Render [emoji icons for flag emojis](https://cloud.githubusercontent.com/assets/2988/12693441/1ae0b546-c6d8-11e5-9a93-9988fd082642.png)
 
 [launchbar]: https://www.obdev.at/products/launchbar
 [built-in emoji action]: https://cloud.githubusercontent.com/assets/2988/11998255/1d4e026a-aa64-11e5-9b41-98e2244c2696.png

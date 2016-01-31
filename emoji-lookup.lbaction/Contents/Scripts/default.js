@@ -18,13 +18,25 @@ class EmojiCharacter {
     return this.data['keywords'];
   }
 
-  get unicodeCodePoint() {
+  // Returns an Array of Strings.
+  get unicodeCodePoints() {
     if (this.character == null) {
-      return null;
+      return [];
     } else {
-      var codePointDecimalValue = this.character.codePointAt(0);
-      var codePointHexValue = codePointDecimalValue.toString(16);
-      return codePointHexValue;
+      // Most emojis have only a single codepoint. Country flags use two
+      // codepoints, determined by the ISO 3166-1 two-character country code.
+      // For example, the US flag emoji is U+1F1FA (for "U") and U+1F1F8 (for
+      // "S").
+      var codePointDecimalValues = _.compact([
+        this.character.codePointAt(0),
+        this.character.codePointAt(2)
+      ]);
+
+      var codePointHexValues = _.map(codePointDecimalValues, function(val){
+        return val.toString(16);
+      });
+
+      return codePointHexValues;
     }
   }
 
@@ -53,7 +65,8 @@ class EmojiCharacter {
   launchbarIcon() {
     var resourcesPath = Action.path + '/Contents/Resources/';
     if (this.isUnicode()) {
-      return resourcesPath + 'unicode/' + this.unicodeCodePoint + '.png';
+      var iconFileBasename = this.unicodeCodePoints.join("-");
+      return resourcesPath + 'unicode/' + iconFileBasename + '.png';
     } else {
       return resourcesPath + this.name + '.png'
     }
@@ -68,7 +81,7 @@ class EmojiCharacter {
   }
 
   isUnicode() {
-    return this.unicodeCodePoint != null;
+    return this.unicodeCodePoints.length > 0;
   }
 }
 
