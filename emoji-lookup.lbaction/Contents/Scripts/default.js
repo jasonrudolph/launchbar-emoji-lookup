@@ -1,6 +1,7 @@
 /* global _, Action, File, include, LaunchBar */
 
 include('../vendor/underscore/underscore-min.js')
+include('emoji-database.js')
 
 class EmojiCharacter {
   constructor (name, metadata) {
@@ -113,22 +114,11 @@ class EmojiCharacter {
 // Returns an Array of Objects.
 function runWithString (argument) {
   var dictionary = getEmojiDictionary()
-  var searchIndex = getSearchIndexFrom(dictionary)
+  var database = new EmojiDatabase({dictionary})
 
   var emojiNames = []
   if (argument.length > 0) {
-    const isMatch = (searchTerm) => searchTerm.startsWith(argument)
-    var indexedSearchTerms = Object.keys(searchIndex)
-    var matchedSearchTerms = indexedSearchTerms.filter(isMatch)
-
-    let matchedEmojiNames = []
-    for (let i = 0; i < matchedSearchTerms.length; i++) {
-      const matchedSearchTerm = matchedSearchTerms[i]
-      matchedEmojiNames.push(...searchIndex[matchedSearchTerm])
-    }
-    uniqueMatchedEmojiNames = new Set(matchedEmojiNames)
-    
-    emojiNames = Array.from(uniqueMatchedEmojiNames)
+    emojiNames = database.getMatches(argument)
   } else {
     emojiNames = Object.keys(dictionary)
   }
@@ -149,33 +139,4 @@ function paste (character) {
 function getEmojiDictionary () {
   const path = Action.path + '/Contents/vendor/emojilib/emojis.json'
   return File.readJSON(path)
-}
-
-// Returns an Object describing supported search terms and the emojis that are
-//   matched by those search terms. Each key is a String representing a search
-//   term. Each value is an Array of Strings representing the names of the
-//   emojis that match the search term.
-function getSearchIndexFrom (dictionary) {
-  var searchIndex = {}
-
-  var emojiNames = Object.keys(dictionary)
-  emojiNames.forEach(function (name) {
-    // Use each word in an emoji's name as a search term. For example, the
-    // 'hourglass_flowing_sand' emoji has three search terms derived from its
-    // name: 'hourglass', 'flowing', and 'sand'.
-    var nameParts = name.split('_')
-
-    // Use each keyword as a search term.
-    var keywords = dictionary[name]['keywords']
-
-    var searchTerms = nameParts.concat(keywords)
-    searchTerms.forEach(function (term) {
-      if (!searchIndex.hasOwnProperty(term)) {
-        searchIndex[term] = []
-      }
-      searchIndex[term].push(name)
-    })
-  })
-
-  return searchIndex
 }
