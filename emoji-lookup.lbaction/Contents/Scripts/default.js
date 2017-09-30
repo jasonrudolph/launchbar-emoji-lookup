@@ -169,7 +169,7 @@ function getSearchIndexFrom (dictionary) {
 
     var searchTerms = nameParts.concat(keywords)
     searchTerms.forEach(function (term) {
-      if (!_.has(searchIndex, term)) {
+      if (!searchIndex.hasOwnProperty(term)) {
         searchIndex[term] = []
       }
       searchIndex[term].push(name)
