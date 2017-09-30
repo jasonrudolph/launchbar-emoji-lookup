@@ -167,7 +167,7 @@ function getSearchIndexFrom (dictionary) {
     // Use each keyword as a search term.
     var keywords = dictionary[name]['keywords']
 
-    var searchTerms = _.union(nameParts, keywords)
+    var searchTerms = nameParts.concat(keywords)
     searchTerms.forEach(function (term) {
       if (!_.has(searchIndex, term)) {
         searchIndex[term] = []
