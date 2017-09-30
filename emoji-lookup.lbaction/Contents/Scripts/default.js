@@ -157,7 +157,7 @@ function getEmojiDictionary () {
 function getSearchIndexFrom (dictionary) {
   var searchIndex = {}
 
-  var emojiNames = _.keys(dictionary)
+  var emojiNames = Object.keys(dictionary)
   emojiNames.forEach(function (name) {
     // Use each word in an emoji's name as a search term. For example, the
     // 'hourglass_flowing_sand' emoji has three search terms derived from its
