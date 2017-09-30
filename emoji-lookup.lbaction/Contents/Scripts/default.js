@@ -118,7 +118,7 @@ function runWithString (argument) {
   var emojiNames = []
   if (argument.length > 0) {
     const isMatch = (searchTerm) => searchTerm.startsWith(argument)
-    var indexedSearchTerms = _.keys(searchIndex)
+    var indexedSearchTerms = Object.keys(searchIndex)
     var matchedSearchTerms = indexedSearchTerms.filter(isMatch)
     var matchedEmojiNames = _.chain(searchIndex)
       .pick(matchedSearchTerms)
@@ -129,7 +129,7 @@ function runWithString (argument) {
 
     emojiNames = matchedEmojiNames
   } else {
-    emojiNames = _.keys(dictionary)
+    emojiNames = Object.keys(dictionary)
   }
 
   return _.map(emojiNames.sort(), function (name) {
