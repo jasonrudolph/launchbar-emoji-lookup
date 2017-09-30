@@ -120,19 +120,20 @@ function runWithString (argument) {
     const isMatch = (searchTerm) => searchTerm.startsWith(argument)
     var indexedSearchTerms = Object.keys(searchIndex)
     var matchedSearchTerms = indexedSearchTerms.filter(isMatch)
-    var matchedEmojiNames = _.chain(searchIndex)
-      .pick(matchedSearchTerms)
-      .values()
-      .flatten()
-      .uniq()
-      .value()
 
-    emojiNames = matchedEmojiNames
+    let matchedEmojiNames = []
+    for (let i = 0; i < matchedSearchTerms.length; i++) {
+      const matchedSearchTerm = matchedSearchTerms[i]
+      matchedEmojiNames.push(...searchIndex[matchedSearchTerm])
+    }
+    uniqueMatchedEmojiNames = new Set(matchedEmojiNames)
+    
+    emojiNames = Array.from(uniqueMatchedEmojiNames)
   } else {
     emojiNames = Object.keys(dictionary)
   }
 
-  return _.map(emojiNames.sort(), function (name) {
+  return emojiNames.sort().map(function (name) {
     var character = new EmojiCharacter(name, dictionary[name])
     return character.toLaunchbarItem()
   })
