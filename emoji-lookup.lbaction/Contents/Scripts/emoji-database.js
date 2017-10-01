@@ -18,7 +18,7 @@ class EmojiDatabase {
   }
 
   // Private
-  getMatchesForSearchTerm(searchTerm) {
+  getMatchesForSearchTerm (searchTerm) {
     const indexedSearchTerms = Object.keys(this.index)
     const matchedSearchTerms = indexedSearchTerms.filter(
       (indexedSearchTerm) => indexedSearchTerm.startsWith(searchTerm)
