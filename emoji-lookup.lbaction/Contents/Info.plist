@@ -9,7 +9,7 @@
 	<key>CFBundleName</key>
 	<string>Emoji Lookup</string>
 	<key>CFBundleVersion</key>
-	<string>0.7.0</string>
+	<string>0.8.0</string>
 	<key>LBTextInputTitle</key>
 	<string>Find an emoji by keyword</string>
 	<key>LBDescription</key>
@@ -26,6 +26,7 @@
     <string>https://raw.githubusercontent.com/jasonrudolph/launchbar-emoji-lookup/master/emoji-lookup.lbaction/Contents/Info.plist</string>
     <key>LBChangelog</key>
 		<string>
+			0.8.0: Add support for multi-word search terms (e.g., "joy face", "finger up")
 			0.7.0: Add support for the new emojis that Apple introduced in 10.12.0 and 10.12.2 (148 new emojis!)
 			0.6.1: Fix search result display to render icons for country flag emojis
 			0.6.0: Add support for the new emojis that Apple introduced in 10.11.1 (439 new emojis!)
