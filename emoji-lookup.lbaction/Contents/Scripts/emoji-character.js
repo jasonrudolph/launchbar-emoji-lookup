@@ -45,12 +45,12 @@ class EmojiCharacter {
       const VARIATION_SELECTOR_16 = '\ufe0f'
       const ZERO_WIDTH_JOINER = '\u200d'
 
-      var parts = [...this.character]
-      var relevantParts = parts.filter(
+      const parts = [...this.character]
+      const relevantParts = parts.filter(
         (part) => (part !== VARIATION_SELECTOR_16 && part !== ZERO_WIDTH_JOINER)
       )
 
-      var codePointHexValues = relevantParts.map(
+      const codePointHexValues = relevantParts.map(
         (part) => part.codePointAt(0).toString(16)
       )
 
@@ -82,7 +82,7 @@ class EmojiCharacter {
 
   launchbarIcon () {
     if (this.isUnicode()) {
-      var iconFileBasename = this.unicodeCodePoints.join('-')
+      const iconFileBasename = this.unicodeCodePoints.join('-')
       return this.resourcesPath + 'unicode/' + iconFileBasename + '.png'
     } else {
       return this.resourcesPath + this.name + '.png'

@@ -13,10 +13,10 @@ include('emoji-database.js')
 //
 // Returns an Array of Objects.
 function runWithString (argument) {
-  var dictionary = getEmojiDictionary()
-  var database = new EmojiDatabase({dictionary})
+  const dictionary = getEmojiDictionary()
+  const database = new EmojiDatabase({dictionary})
 
-  var emojiNames = []
+  let emojiNames
   if (argument.length > 0) {
     emojiNames = database.getMatches(argument)
   } else {
@@ -24,7 +24,7 @@ function runWithString (argument) {
   }
 
   return emojiNames.sort().map(function (name) {
-    var character = new EmojiCharacter({name, metadata: dictionary[name]})
+    const character = new EmojiCharacter({name, metadata: dictionary[name]})
     return character.toLaunchbarItem()
   })
 }

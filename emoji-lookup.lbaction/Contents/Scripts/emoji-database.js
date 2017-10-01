@@ -49,19 +49,19 @@ function intersection (arrays) {
 //   term. Each value is an Array of Strings representing the names of the
 //   emojis that match the search term.
 function getSearchIndexFrom (dictionary) {
-  var searchIndex = {}
+  const searchIndex = {}
 
-  var emojiNames = Object.keys(dictionary)
+  const emojiNames = Object.keys(dictionary)
   emojiNames.forEach(function (name) {
     // Use each word in an emoji's name as a search term. For example, the
     // 'hourglass_flowing_sand' emoji has three search terms derived from its
     // name: 'hourglass', 'flowing', and 'sand'.
-    var nameParts = name.split('_')
+    const nameParts = name.split('_')
 
     // Use each keyword as a search term.
-    var keywords = dictionary[name]['keywords']
+    const keywords = dictionary[name]['keywords']
 
-    var searchTerms = nameParts.concat(keywords)
+    const searchTerms = nameParts.concat(keywords)
     searchTerms.forEach(function (term) {
       if (!searchIndex.hasOwnProperty(term)) {
         searchIndex[term] = []
