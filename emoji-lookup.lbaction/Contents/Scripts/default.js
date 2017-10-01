@@ -1,4 +1,4 @@
-/* global _, Action, File, include, LaunchBar */
+/* global Action, File, include, LaunchBar */
 
 include('emoji-database.js')
 
