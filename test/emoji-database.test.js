@@ -28,5 +28,12 @@ describe('EmojiDatabase', () => {
       matches = database.getMatches('teeth')
       assert.equal(matches.filter((name) => name == 'grimacing').length, 1)
     })
+
+    it('finds emojis by multi-word search term', () => {
+      let matches = database.getMatches('finger up')
+      assert(matches.find((name) => name == 'point_up'))
+      assert(matches.find((name) => name == 'point_up_2'))
+      assert(!matches.find((name) => name == 'point_down'))
+    })
   })
 })

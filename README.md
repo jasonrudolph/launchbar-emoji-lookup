@@ -24,7 +24,6 @@ Sometimes you don't know the exact name, but you know a keyword or synonym. With
 
 ## TODO
 
-- [ ] Add support for multi-word search terms (e.g., "joy face")
 - [ ] Add ability to lookup emoji [by category](https://github.com/jasonrudolph/launchbar-emoji-lookup/blob/d25677084e514772a151161c163f8520bac652ee/emoji-lookup.lbaction/Contents/vendor/emojilib-1.1.0/emojis.json#L5)
 
 [launchbar]: https://www.obdev.at/products/launchbar

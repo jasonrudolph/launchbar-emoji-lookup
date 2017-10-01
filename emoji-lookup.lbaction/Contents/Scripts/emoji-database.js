@@ -10,9 +10,19 @@ class EmojiDatabase {
   //
   // Returns an Array of Strings.
   getMatches (query) {
-    const isMatch = (searchTerm) => searchTerm.startsWith(query)
+    const querySearchTerms = query.split(/\W+/)
+
+    return intersection(
+      querySearchTerms.map((term) => this.getMatchesForSearchTerm(term))
+    )
+  }
+
+  // Private
+  getMatchesForSearchTerm(searchTerm) {
     const indexedSearchTerms = Object.keys(this.index)
-    const matchedSearchTerms = indexedSearchTerms.filter(isMatch)
+    const matchedSearchTerms = indexedSearchTerms.filter(
+      (indexedSearchTerm) => indexedSearchTerm.startsWith(searchTerm)
+    )
 
     let matchedEmojiNames = []
     for (let i = 0; i < matchedSearchTerms.length; i++) {
@@ -23,6 +33,15 @@ class EmojiDatabase {
 
     return Array.from(uniqueMatchedEmojiNames)
   }
+}
+
+function intersection (arrays) {
+  if (arrays.length === 1) return arrays[0]
+
+  const [first, ...rest] = arrays
+  return first.filter((candidate) =>
+    rest.every((array) => array.includes(candidate))
+  )
 }
 
 // Returns an Object describing supported search terms and the emojis that are
