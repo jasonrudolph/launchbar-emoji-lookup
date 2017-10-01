@@ -13,20 +13,20 @@ describe('EmojiCharacter', () => {
 
   describe('#launchbarIcon', () => {
     it('returns path for single-codepoint emoji', () => {
-      const character = new EmojiCharacter(
-        'boom',
-        dictionary['boom'],
-        '/path/to/resources/'
-      )
+      const character = new EmojiCharacter({
+        name: 'boom',
+        metadata: dictionary['boom'],
+        resourcesPath: '/path/to/resources/'
+      })
       assert.equal(character.launchbarIcon(), '/path/to/resources/unicode/1f4a5.png')
     })
 
     it('returns path for multi-codepoint emoji ', () => {
-      const character = new EmojiCharacter(
-        'female_sleuth',
-        dictionary['female_sleuth'],
-        '/path/to/resources/'
-      )
+      const character = new EmojiCharacter({
+        name: 'female_sleuth',
+        metadata: dictionary['female_sleuth'],
+        resourcesPath: '/path/to/resources/'
+      })
       assert.equal(character.launchbarIcon(), '/path/to/resources/unicode/1f575-2640.png')
     })
   })

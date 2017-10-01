@@ -24,7 +24,7 @@ function runWithString (argument) {
   }
 
   return emojiNames.sort().map(function (name) {
-    var character = new EmojiCharacter(name, dictionary[name])
+    var character = new EmojiCharacter({name, metadata: dictionary[name]})
     return character.toLaunchbarItem()
   })
 }
