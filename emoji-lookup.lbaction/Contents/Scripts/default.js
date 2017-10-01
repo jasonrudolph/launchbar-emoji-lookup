@@ -1,6 +1,5 @@
 /* global _, Action, File, include, LaunchBar */
 
-include('../vendor/underscore/underscore-min.js')
 include('emoji-database.js')
 
 class EmojiCharacter {
@@ -48,8 +47,9 @@ class EmojiCharacter {
       const ZERO_WIDTH_JOINER = '\u200d'
 
       var parts = [...this.character]
-      var relevantParts =
-        _.without(parts, VARIATION_SELECTOR_16, ZERO_WIDTH_JOINER)
+      var relevantParts = parts.filter(
+        (part) => (part !== VARIATION_SELECTOR_16 && part !== ZERO_WIDTH_JOINER)
+      )
 
       var codePointHexValues = relevantParts.map(
         (part) => part.codePointAt(0).toString(16)
