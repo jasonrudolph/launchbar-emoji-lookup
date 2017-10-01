@@ -51,9 +51,9 @@ class EmojiCharacter {
       var relevantParts =
         _.without(parts, VARIATION_SELECTOR_16, ZERO_WIDTH_JOINER)
 
-      var codePointHexValues = _.map(relevantParts, function (part) {
-        return part.codePointAt(0).toString(16)
-      })
+      var codePointHexValues = relevantParts.map(
+        (part) => part.codePointAt(0).toString(16)
+      )
 
       return codePointHexValues
     }
