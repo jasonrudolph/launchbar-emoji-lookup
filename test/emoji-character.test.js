@@ -23,8 +23,8 @@ describe('EmojiCharacter', () => {
 
     it('returns path for multi-codepoint emoji ', () => {
       const character = new EmojiCharacter({
-        name: 'female_sleuth',
-        metadata: dictionary['female_sleuth'],
+        name: 'female_detective',
+        metadata: dictionary['female_detective'],
         resourcesPath: '/path/to/resources/'
       })
       assert.equal(character.launchbarIcon(), '/path/to/resources/unicode/1f575-2640.png')
