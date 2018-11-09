@@ -234,7 +234,7 @@
     "category": "people"
   },
   "unamused": {
-    "keywords": ["indifference", "bored", "straight face", "serious", "sarcasm"],
+    "keywords": ["indifference", "bored", "straight face", "serious", "sarcasm", "unimpressed", "skeptical", "dubious", "side_eye"],
     "char": "😒",
     "fitzpatrick_scale": false,
     "category": "people"
@@ -1292,25 +1292,25 @@
   "mermaid": {
     "keywords": ["woman", "female", "merwoman", "ariel"],
     "char": "🧜‍♀️",
-    "fitzpatrick_scale": false,
+    "fitzpatrick_scale": true,
     "category": "people"
   },
   "merman": {
     "keywords": ["man", "male", "triton"],
     "char": "🧜‍♂️",
-    "fitzpatrick_scale": false,
+    "fitzpatrick_scale": true,
     "category": "people"
   },
   "woman_fairy": {
     "keywords": ["woman", "female"],
     "char": "🧚‍♀️",
-    "fitzpatrick_scale": false,
+    "fitzpatrick_scale": true,
     "category": "people"
   },
   "man_fairy": {
     "keywords": ["man", "male"],
     "char": "🧚‍♂️",
-    "fitzpatrick_scale": false,
+    "fitzpatrick_scale": true,
     "category": "people"
   },
   "angel": {
@@ -1394,31 +1394,31 @@
   "dancing_women": {
     "keywords": ["female", "bunny", "women", "girls"],
     "char": "👯",
-    "fitzpatrick_scale": true,
+    "fitzpatrick_scale": false,
     "category": "people"
   },
   "dancing_men": {
     "keywords": ["male", "bunny", "men", "boys"],
     "char": "👯‍♂️",
-    "fitzpatrick_scale": true,
+    "fitzpatrick_scale": false,
     "category": "people"
   },
   "couple": {
     "keywords": ["pair", "people", "human", "love", "date", "dating", "like", "affection", "valentines", "marriage"],
     "char": "👫",
-    "fitzpatrick_scale": true,
+    "fitzpatrick_scale": false,
     "category": "people"
   },
   "two_men_holding_hands": {
     "keywords": ["pair", "couple", "love", "like", "bromance", "friendship", "people", "human"],
     "char": "👬",
-    "fitzpatrick_scale": true,
+    "fitzpatrick_scale": false,
     "category": "people"
   },
   "two_women_holding_hands": {
     "keywords": ["pair", "friendship", "couple", "love", "like", "female", "people", "human"],
     "char": "👭",
-    "fitzpatrick_scale": true,
+    "fitzpatrick_scale": false,
     "category": "people"
   },
   "bowing_woman": {
@@ -1568,7 +1568,7 @@
   "couple_with_heart_woman_man": {
     "keywords": ["pair", "love", "like", "affection", "human", "dating", "valentines", "marriage"],
     "char": "💑",
-    "fitzpatrick_scale": true,
+    "fitzpatrick_scale": false,
     "category": "people"
   },
   "couple_with_heart_woman_woman": {
@@ -1586,7 +1586,7 @@
   "couplekiss_man_woman": {
     "keywords": ["pair", "valentines", "love", "like", "dating", "marriage"],
     "char": "💏",
-    "fitzpatrick_scale": true,
+    "fitzpatrick_scale": false,
     "category": "people"
   },
   "couplekiss_woman_woman": {
@@ -1604,7 +1604,7 @@
   "family_man_woman_boy": {
     "keywords": ["home", "parents", "child", "mom", "dad", "father", "mother", "people", "human"],
     "char": "👪",
-    "fitzpatrick_scale": true,
+    "fitzpatrick_scale": false,
     "category": "people"
   },
   "family_man_woman_girl": {
@@ -3444,7 +3444,7 @@
     "category": "food_and_drink"
   },
   "clinking_glasses": {
-    "keywords": ["beverage", "drink", "party", "alcohol", "celebrate", "cheers"],
+    "keywords": ["beverage", "drink", "party", "alcohol", "celebrate", "cheers", "wine", "champagne", "toast"],
     "char": "🥂",
     "fitzpatrick_scale": false,
     "category": "food_and_drink"
@@ -3656,7 +3656,7 @@
   "skier": {
     "keywords": ["sports", "winter", "snow"],
     "char": "⛷",
-    "fitzpatrick_scale": true,
+    "fitzpatrick_scale": false,
     "category": "activity"
   },
   "snowboarder": {
@@ -3674,13 +3674,13 @@
   "women_wrestling": {
     "keywords": ["sports", "wrestlers"],
     "char": "🤼‍♀️",
-    "fitzpatrick_scale": true,
+    "fitzpatrick_scale": false,
     "category": "activity"
   },
   "men_wrestling": {
     "keywords": ["sports", "wrestlers"],
     "char": "🤼‍♂️",
-    "fitzpatrick_scale": true,
+    "fitzpatrick_scale": false,
     "category": "activity"
   },
   "woman_cartwheeling": {
@@ -3752,7 +3752,7 @@
   "rowing_woman": {
     "keywords": ["sports", "hobby", "water", "ship", "woman", "female"],
     "char": "🚣‍♀️",
-    "fitzpatrick_scale": false,
+    "fitzpatrick_scale": true,
     "category": "activity"
   },
   "rowing_man": {
@@ -3776,7 +3776,7 @@
   "swimming_woman": {
     "keywords": ["sports", "exercise", "human", "athlete", "water", "summer", "woman", "female"],
     "char": "🏊‍♀️",
-    "fitzpatrick_scale": false,
+    "fitzpatrick_scale": true,
     "category": "activity"
   },
   "swimming_man": {
@@ -3812,7 +3812,7 @@
   "surfing_woman": {
     "keywords": ["sports", "ocean", "sea", "summer", "beach", "woman", "female"],
     "char": "🏄‍♀️",
-    "fitzpatrick_scale": false,
+    "fitzpatrick_scale": true,
     "category": "activity"
   },
   "surfing_man": {
@@ -3830,7 +3830,7 @@
   "basketball_woman": {
     "keywords": ["sports", "human", "woman", "female"],
     "char": "⛹️‍♀️",
-    "fitzpatrick_scale": false,
+    "fitzpatrick_scale": true,
     "category": "activity"
   },
   "basketball_man": {
@@ -3842,7 +3842,7 @@
   "weight_lifting_woman": {
     "keywords": ["sports", "training", "exercise", "woman", "female"],
     "char": "🏋️‍♀️",
-    "fitzpatrick_scale": false,
+    "fitzpatrick_scale": true,
     "category": "activity"
   },
   "weight_lifting_man": {
@@ -3854,7 +3854,7 @@
   "biking_woman": {
     "keywords": ["sports", "bike", "exercise", "hipster", "woman", "female"],
     "char": "🚴‍♀️",
-    "fitzpatrick_scale": false,
+    "fitzpatrick_scale": true,
     "category": "activity"
   },
   "biking_man": {
@@ -3866,7 +3866,7 @@
   "mountain_biking_woman": {
     "keywords": ["transportation", "sports", "human", "race", "bike", "woman", "female"],
     "char": "🚵‍♀️",
-    "fitzpatrick_scale": false,
+    "fitzpatrick_scale": true,
     "category": "activity"
   },
   "mountain_biking_man": {
@@ -6312,7 +6312,7 @@
     "category": "symbols"
   },
   "x": {
-    "keywords": ["no", "delete", "remove", "cancel"],
+    "keywords": ["no", "delete", "remove", "cancel", "red"],
     "char": "❌",
     "fitzpatrick_scale": false,
     "category": "symbols"
@@ -9010,95 +9010,5 @@
     "char": "🇿🇼",
     "fitzpatrick_scale": false,
     "category": "flags"
-  },
-  "octocat": {
-    "keywords": ["animal", "octopus", "github", "custom_"],
-    "char": null,
-    "fitzpatrick_scale": false,
-    "category": "_custom"
-  },
-  "shipit": {
-    "keywords": ["squirrel", "detective", "animal", "sherlock", "inspector", "custom_"],
-    "char": null,
-    "fitzpatrick_scale": false,
-    "category": "_custom"
-  },
-  "bowtie": {
-    "keywords": ["face", "formal", "fashion", "suit", "classy", "magic", "circus"],
-    "char": null,
-    "fitzpatrick_scale": false,
-    "category": "_custom"
-  },
-  "neckbeard": {
-    "keywords": ["nerdy", "face", "custom_"],
-    "char": null,
-    "fitzpatrick_scale": false,
-    "category": "_custom"
-  },
-  "trollface": {
-    "keywords": ["internet", "meme", "custom_"],
-    "char": null,
-    "fitzpatrick_scale": false,
-    "category": "_custom"
-  },
-  "godmode": {
-    "keywords": ["doom", "oldschool"],
-    "char": null,
-    "fitzpatrick_scale": false,
-    "category": "_custom"
-  },
-  "goberserk": {
-    "keywords": ["doom", "rage", "bloody", "hurt"],
-    "char": null,
-    "fitzpatrick_scale": false,
-    "category": "_custom"
-  },
-  "finnadie": {
-    "keywords": ["doom", "oldschool"],
-    "char": null,
-    "fitzpatrick_scale": false,
-    "category": "_custom"
-  },
-  "feelsgood": {
-    "keywords": ["doom", "oldschool"],
-    "char": null,
-    "fitzpatrick_scale": false,
-    "category": "_custom"
-  },
-  "rage1": {
-    "keywords": ["angry", "mad", "hate", "despise"],
-    "char": null,
-    "fitzpatrick_scale": false,
-    "category": "_custom"
-  },
-  "rage2": {
-    "keywords": ["angry", "mad", "hate", "despise"],
-    "char": null,
-    "fitzpatrick_scale": false,
-    "category": "_custom"
-  },
-  "rage3": {
-    "keywords": ["angry", "mad", "hate", "despise"],
-    "char": null,
-    "fitzpatrick_scale": false,
-    "category": "_custom"
-  },
-  "rage4": {
-    "keywords": ["angry", "mad", "hate", "despise"],
-    "char": null,
-    "fitzpatrick_scale": false,
-    "category": "_custom"
-  },
-  "suspect": {
-    "keywords": ["mad", "custom_"],
-    "char": null,
-    "fitzpatrick_scale": false,
-    "category": "_custom"
-  },
-  "hurtrealbad": {
-    "keywords": ["mad", "injured", "doom", "oldschool", "custom_"],
-    "char": null,
-    "fitzpatrick_scale": false,
-    "category": "_custom"
   }
 }
