@@ -1,8 +1,9 @@
 /* global Action, File, include, LaunchBar */
-/* global EmojiDatabase, EmojiCharacter */
+/* global EmojiCharacter, EmojiDatabase, getDictionary */
 
 include('emoji-character.js')
 include('emoji-database.js')
+include('emoji-dictionary.js')
 
 // Determine the list of emojis that match the given search term. If the given
 // search term is empty, return all available emojis. If the given search term
@@ -33,10 +34,8 @@ function paste (character) {
   LaunchBar.paste(character)
 }
 
-// Returns an Object describing all the supported emojis. Each key is a String
-//   representing the name of an emoji. Each value is an Object containing the
-//   metadata for that emoji (e.g., the emoji character, the emoji's keywords).
 function getEmojiDictionary () {
-  const path = Action.path + '/Contents/vendor/emojilib/emojis.json'
-  return File.readJSON(path)
+  const path = Action.path + '/Contents/vendor/emojilib/emoji-en-US.json'
+  const nameAndKeywordsByChar = File.readJSON(path)
+  return getDictionary(nameAndKeywordsByChar)
 }

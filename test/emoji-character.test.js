@@ -2,20 +2,40 @@ const assert = require('assert')
 const fs = require('fs')
 const path = require('path')
 const {EmojiCharacter} = require('../emoji-lookup.lbaction/Contents/Scripts/emoji-character.js')
-const dictionaryPath = path.join(__dirname, '../emoji-lookup.lbaction/Contents/vendor/emojilib/emojis.json')
+const {getDictionary} = require('../emoji-lookup.lbaction/Contents/Scripts/emoji-dictionary.js')
+const emojilibDataPath = path.join(__dirname, '../emoji-lookup.lbaction/Contents/vendor/emojilib/emoji-en-US.json')
 
 describe('EmojiCharacter', () => {
   let dictionary
 
   beforeEach(() => {
-    dictionary = JSON.parse(fs.readFileSync(dictionaryPath))
+    const nameAndKeywordsByChar = JSON.parse(fs.readFileSync(emojilibDataPath))
+    dictionary = getDictionary(nameAndKeywordsByChar)
+  })
+
+  describe('#humanizedName', () => {
+    it('returns name in title-case(ish)', () => {
+      let character = new EmojiCharacter({
+        name: 'grinning_face_with_sweat',
+        metadata: dictionary['grinning_face_with_sweat'],
+        resourcesPath: '/path/to/resources/'
+      })
+      assert.equal(character.humanizedName, 'Grinning Face With Sweat')
+
+      character = new EmojiCharacter({
+        name: 'keycap_',
+        metadata: dictionary['keycap_'],
+        resourcesPath: '/path/to/resources/'
+      })
+      assert.equal(character.humanizedName, 'Keycap')
+    })
   })
 
   describe('#launchbarIcon', () => {
     it('returns path for single-codepoint emoji', () => {
       const character = new EmojiCharacter({
-        name: 'boom',
-        metadata: dictionary['boom'],
+        name: 'collision',
+        metadata: dictionary['collision'],
         resourcesPath: '/path/to/resources/'
       })
       assert.equal(character.launchbarIcon(), '/path/to/resources/unicode/1f4a5.png')
@@ -23,8 +43,8 @@ describe('EmojiCharacter', () => {
 
     it('returns path for multi-codepoint emoji ', () => {
       const character = new EmojiCharacter({
-        name: 'female_detective',
-        metadata: dictionary['female_detective'],
+        name: 'woman_detective',
+        metadata: dictionary['woman_detective'],
         resourcesPath: '/path/to/resources/'
       })
       assert.equal(character.launchbarIcon(), '/path/to/resources/unicode/1f575-2640.png')

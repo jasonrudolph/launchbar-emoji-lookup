@@ -11,8 +11,9 @@ class EmojiCharacter {
     return this.data['char']
   }
 
-  get tag () {
-    return ':' + this.name + ':'
+  get humanizedName () {
+    const words = this.name.split('_').filter(word => word.length > 0)
+    return words.map(word => `${word[0].toUpperCase()}${word.slice(1)}`).join(' ')
   }
 
   get keywords () {
@@ -63,13 +64,13 @@ class EmojiCharacter {
       title: this.launchbarItemTitle(),
       label: this.launchbarItemLabel(),
       action: 'paste',
-      actionArgument: this.characterOrTag(),
+      actionArgument: this.characterOrhumanizedName(),
       icon: this.launchbarIcon()
     }
   }
 
   launchbarItemTitle () {
-    return this.tag
+    return this.humanizedName
   }
 
   launchbarItemLabel () {
@@ -89,11 +90,11 @@ class EmojiCharacter {
     }
   }
 
-  characterOrTag () {
+  characterOrhumanizedName () {
     if (this.character != null) {
       return this.character
     } else {
-      return this.tag
+      return this.humanizedName
     }
   }
 

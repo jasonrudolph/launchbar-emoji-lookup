@@ -2,38 +2,40 @@ const assert = require('assert')
 const fs = require('fs')
 const path = require('path')
 const {EmojiDatabase} = require('../emoji-lookup.lbaction/Contents/Scripts/emoji-database.js')
-const dictionaryPath = path.join(__dirname, '../emoji-lookup.lbaction/Contents/vendor/emojilib/emojis.json')
+const {getDictionary} = require('../emoji-lookup.lbaction/Contents/Scripts/emoji-dictionary.js')
+const emojilibDataPath = path.join(__dirname, '../emoji-lookup.lbaction/Contents/vendor/emojilib/emoji-en-US.json')
 
 describe('EmojiDatabase', () => {
   describe('#getMatches', () => {
     let database
 
     beforeEach(() => {
-      const dictionary = JSON.parse(fs.readFileSync(dictionaryPath))
+      const nameAndKeywordsByChar = JSON.parse(fs.readFileSync(emojilibDataPath))
+      const dictionary = getDictionary(nameAndKeywordsByChar)
       database = new EmojiDatabase({dictionary})
     })
 
     it('finds emojis by name', () => {
-      let matches = database.getMatches('gri')
-      assert.equal(matches.filter((name) => name == 'grimacing').length, 1)
+      let matches = database.getMatches('tho')
+      assert.equal(matches.filter((name) => name == 'thought_balloon').length, 1)
 
-      matches = database.getMatches('grimacing')
-      assert.equal(matches.filter((name) => name == 'grimacing').length, 1)
+      matches = database.getMatches('balloo')
+      assert.equal(matches.filter((name) => name == 'thought_balloon').length, 1)
     })
 
     it('finds emojis by keyword', () => {
-      let matches = database.getMatches('face')
-      assert.equal(matches.filter((name) => name == 'grimacing').length, 1)
+      let matches = database.getMatches('bubble')
+      assert.equal(matches.filter((name) => name == 'thought_balloon').length, 1)
 
-      matches = database.getMatches('teeth')
-      assert.equal(matches.filter((name) => name == 'grimacing').length, 1)
+      matches = database.getMatches('think')
+      assert.equal(matches.filter((name) => name == 'thought_balloon').length, 1)
     })
 
     it('finds emojis by multi-word search term', () => {
       let matches = database.getMatches('finger up')
-      assert(matches.find((name) => name == 'point_up'))
-      assert(matches.find((name) => name == 'point_up_2'))
-      assert(!matches.find((name) => name == 'point_down'))
+      assert(matches.find((name) => name == 'index_pointing_up'))
+      assert(matches.find((name) => name == 'backhand_index_pointing_up'))
+      assert(!matches.find((name) => name == 'backhand_index_pointing_down'))
     })
   })
 })
