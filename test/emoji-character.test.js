@@ -49,5 +49,22 @@ describe('EmojiCharacter', () => {
       })
       assert.equal(character.launchbarIcon(), '/path/to/resources/unicode/1f575-2640.png')
     })
+
+    it('returns path to image file on disk for every emoji in the dictionary', () => {
+      const characters = Object.keys(dictionary).map((name) => {
+        return new EmojiCharacter({
+          name: name,
+          metadata: dictionary[name],
+          resourcesPath: 'emoji-lookup.lbaction/Contents/Resources/'
+        })
+      })
+      const charactersWithMissingImages = characters.filter((character) => {
+        return !fs.existsSync(character.launchbarIcon())
+      })
+
+      const nameAndPaths = charactersWithMissingImages.map((character) => `${character.name} (${character.launchbarIcon()})`)
+      assert.strictEqual(0, nameAndPaths.length, `Missing image file for ${nameAndPaths.join(', ')}`
+      )
+    })
   })
 })
