@@ -13,6 +13,24 @@ describe('EmojiCharacter', () => {
     dictionary = getDictionary(nameAndKeywordsByChar)
   })
 
+  describe('#humanizedName', () => {
+    it('returns name in title-case(ish)', () => {
+      let character = new EmojiCharacter({
+        name: 'grinning_face_with_sweat',
+        metadata: dictionary['grinning_face_with_sweat'],
+        resourcesPath: '/path/to/resources/'
+      })
+      assert.equal(character.humanizedName, 'Grinning Face With Sweat')
+
+      character = new EmojiCharacter({
+        name: 'keycap_',
+        metadata: dictionary['keycap_'],
+        resourcesPath: '/path/to/resources/'
+      })
+      assert.equal(character.humanizedName, 'Keycap')
+    })
+  })
+
   describe('#launchbarIcon', () => {
     it('returns path for single-codepoint emoji', () => {
       const character = new EmojiCharacter({
