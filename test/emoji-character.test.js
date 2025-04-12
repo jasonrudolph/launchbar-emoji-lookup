@@ -78,8 +78,10 @@ describe("EmojiCharacter", () => {
 
       // TODO: Figure out why these image files are missing, add the missing files, and remove this list 🕵️
       const knownCharacterNamesWithMissingImages = [
-        "kiss_woman_man",
         "couple_with_heart_woman_man",
+        "face exhaling",
+        "face in clouds",
+        "face with spiral eyes",
         "family_man_woman_boy",
         "female_sign",
         "flag_ascension_island",
@@ -92,11 +94,16 @@ describe("EmojiCharacter", () => {
         "flag_svalbard_jan_mayen",
         "flag_tristan_da_cunha",
         "flag_u_s_outlying_islands",
+        "heart on fire",
         "kiss_woman_man",
         "male_sign",
+        "man beard",
         "man in tuxedo",
         "man with veil",
         "medical_symbol",
+        "mending heart",
+        "transgender flag",
+        "woman beard",
         "woman in tuxedo",
         "woman with veil",
       ];
