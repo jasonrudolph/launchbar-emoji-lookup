@@ -38,7 +38,7 @@ describe("EmojiCharacter", () => {
     })
   })
 
-  describe("#launchbarIcon", () => {
+  describe("#launchbarItemIcon", () => {
     it("returns path for single-codepoint emoji", () => {
       const character = new EmojiCharacter({
         name: "collision",
@@ -46,8 +46,8 @@ describe("EmojiCharacter", () => {
         resourcesPath: "/path/to/resources/",
       })
       assert.equal(
-        character.launchbarIcon(),
-        "/path/to/resources/unicode/1f4a5.png",
+        character.launchbarItemIcon(),
+        "/path/to/resources/unicode/1f4a5.png"
       )
     })
 
@@ -58,8 +58,8 @@ describe("EmojiCharacter", () => {
         resourcesPath: "/path/to/resources/",
       })
       assert.equal(
-        character.launchbarIcon(),
-        "/path/to/resources/unicode/1f575-2640.png",
+        character.launchbarItemIcon(),
+        "/path/to/resources/unicode/1f575-2640.png"
       )
     })
 
@@ -73,7 +73,7 @@ describe("EmojiCharacter", () => {
       })
 
       const charactersWithMissingImages = characters.filter((character) => {
-        return !fs.existsSync(character.launchbarIcon())
+        return !fs.existsSync(character.launchbarItemIcon())
       })
 
       // TODO: Figure out why these image files are missing, add the missing files, and remove this list 🕵️
@@ -109,7 +109,7 @@ describe("EmojiCharacter", () => {
       ]
 
       const nameAndPaths = charactersWithMissingImages.map(
-        (character) => `${character.name} (${character.launchbarIcon()})`,
+        (character) => `${character.name} (${character.launchbarItemIcon()})`
       )
       assert.strictEqual(
         knownCharacterNamesWithMissingImages.length,

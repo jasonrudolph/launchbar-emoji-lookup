@@ -67,7 +67,7 @@ class EmojiCharacter {
       label: this.launchbarItemLabel(),
       action: "paste",
       actionArgument: this.characterOrHumanizedName(),
-      icon: this.launchbarIcon(),
+      icon: this.launchbarItemIcon(),
     }
   }
 
@@ -83,7 +83,7 @@ class EmojiCharacter {
     }
   }
 
-  launchbarIcon() {
+  launchbarItemIcon() {
     if (this.isUnicode()) {
       const iconFileBasename = this.unicodeCodePoints.join("-")
       return this.resourcesPath + "unicode/" + iconFileBasename + ".png"
