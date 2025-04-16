@@ -1,5 +1,5 @@
 class EmojiDatabase {
-  constructor ({dictionary}) {
+  constructor({ dictionary }) {
     this.dictionary = dictionary
     this.index = getSearchIndexFrom(dictionary)
   }
@@ -9,19 +9,19 @@ class EmojiDatabase {
   // query - A String containing one or more search terms.
   //
   // Returns an Array of Strings.
-  getMatches (query) {
+  getMatches(query) {
     const querySearchTerms = query.split(/\W+/)
 
     return intersection(
-      querySearchTerms.map((term) => this.getMatchesForSearchTerm(term))
+      querySearchTerms.map((term) => this.getMatchesForSearchTerm(term)),
     )
   }
 
   // Private
-  getMatchesForSearchTerm (searchTerm) {
+  getMatchesForSearchTerm(searchTerm) {
     const indexedSearchTerms = Object.keys(this.index)
-    const matchedSearchTerms = indexedSearchTerms.filter(
-      (indexedSearchTerm) => indexedSearchTerm.startsWith(searchTerm)
+    const matchedSearchTerms = indexedSearchTerms.filter((indexedSearchTerm) =>
+      indexedSearchTerm.startsWith(searchTerm),
     )
 
     let matchedEmojiNames = []
@@ -35,12 +35,12 @@ class EmojiDatabase {
   }
 }
 
-function intersection (arrays) {
+function intersection(arrays) {
   if (arrays.length === 1) return arrays[0]
 
   const [first, ...rest] = arrays
   return first.filter((candidate) =>
-    rest.every((array) => array.includes(candidate))
+    rest.every((array) => array.includes(candidate)),
   )
 }
 
@@ -48,7 +48,7 @@ function intersection (arrays) {
 //   matched by those search terms. Each key is a String representing a search
 //   term. Each value is an Array of Strings representing the names of the
 //   emojis that match the search term.
-function getSearchIndexFrom (dictionary) {
+function getSearchIndexFrom(dictionary) {
   const searchIndex = {}
 
   const emojiNames = Object.keys(dictionary)
@@ -56,10 +56,10 @@ function getSearchIndexFrom (dictionary) {
     // Use each word in an emoji's name as a search term. For example, the
     // 'hourglass_flowing_sand' emoji has three search terms derived from its
     // name: 'hourglass', 'flowing', and 'sand'.
-    const nameParts = name.split('_')
+    const nameParts = name.split("_")
 
     // Use each keyword as a search term.
-    const keywords = dictionary[name]['keywords']
+    const keywords = dictionary[name]["keywords"]
 
     const searchTerms = nameParts.concat(keywords)
     searchTerms.forEach(function (term) {
@@ -73,4 +73,6 @@ function getSearchIndexFrom (dictionary) {
   return searchIndex
 }
 
-if (typeof module !== 'undefined') { module.exports.EmojiDatabase = EmojiDatabase }
+if (typeof module !== "undefined") {
+  module.exports.EmojiDatabase = EmojiDatabase
+}

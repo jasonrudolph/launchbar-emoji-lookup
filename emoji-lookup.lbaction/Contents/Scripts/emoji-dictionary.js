@@ -20,9 +20,11 @@ function getDictionary(nameAndKeywordsByChar) {
   for (const char in nameAndKeywordsByChar) {
     const name = nameAndKeywordsByChar[char][0]
     const keywords = nameAndKeywordsByChar[char].slice(1)
-    dictionary[name] = { 'char': char, 'keywords': keywords }
+    dictionary[name] = { char: char, keywords: keywords }
   }
   return dictionary
 }
 
-if (typeof module !== 'undefined') { module.exports = { getDictionary } }
+if (typeof module !== "undefined") {
+  module.exports = { getDictionary }
+}

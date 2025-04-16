@@ -1,9 +1,9 @@
 /* global Action, File, include, LaunchBar */
 /* global EmojiCharacter, EmojiDatabase, getDictionary */
 
-include('emoji-character.js')
-include('emoji-database.js')
-include('emoji-dictionary.js')
+include("emoji-character.js")
+include("emoji-database.js")
+include("emoji-dictionary.js")
 
 // Determine the list of emojis that match the given search term. If the given
 // search term is empty, return all available emojis. If the given search term
@@ -13,9 +13,9 @@ include('emoji-dictionary.js')
 // argument - A String search term.
 //
 // Returns an Array of Objects.
-function runWithString (argument) {
+function runWithString(argument) {
   const dictionary = getEmojiDictionary()
-  const database = new EmojiDatabase({dictionary})
+  const database = new EmojiDatabase({ dictionary })
 
   let emojiNames
   if (argument.length > 0) {
@@ -25,17 +25,17 @@ function runWithString (argument) {
   }
 
   return emojiNames.sort().map(function (name) {
-    const character = new EmojiCharacter({name, metadata: dictionary[name]})
+    const character = new EmojiCharacter({ name, metadata: dictionary[name] })
     return character.toLaunchbarItem()
   })
 }
 
-function paste (character) {
+function paste(character) {
   LaunchBar.paste(character)
 }
 
-function getEmojiDictionary () {
-  const path = Action.path + '/Contents/vendor/emojilib/emoji-en-US.json'
+function getEmojiDictionary() {
+  const path = Action.path + "/Contents/vendor/emojilib/emoji-en-US.json"
   const nameAndKeywordsByChar = File.readJSON(path)
   return getDictionary(nameAndKeywordsByChar)
 }

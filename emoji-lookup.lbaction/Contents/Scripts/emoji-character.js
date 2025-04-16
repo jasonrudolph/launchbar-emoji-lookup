@@ -1,27 +1,29 @@
 /* global Action */
 
 class EmojiCharacter {
-  constructor ({name, metadata, resourcesPath}) {
+  constructor({ name, metadata, resourcesPath }) {
     this.name = name
     this.data = metadata
-    this.resourcesPath = resourcesPath || (Action.path + '/Contents/Resources/')
+    this.resourcesPath = resourcesPath || Action.path + "/Contents/Resources/"
   }
 
-  get character () {
-    return this.data['char']
+  get character() {
+    return this.data["char"]
   }
 
-  get humanizedName () {
-    const words = this.name.split('_').filter(word => word.length > 0)
-    return words.map(word => `${word[0].toUpperCase()}${word.slice(1)}`).join(' ')
+  get humanizedName() {
+    const words = this.name.split("_").filter((word) => word.length > 0)
+    return words
+      .map((word) => `${word[0].toUpperCase()}${word.slice(1)}`)
+      .join(" ")
   }
 
-  get keywords () {
-    return this.data['keywords']
+  get keywords() {
+    return this.data["keywords"]
   }
 
   // Returns an Array of Strings.
-  get unicodeCodePoints () {
+  get unicodeCodePoints() {
     if (this.character == null) {
       return []
     } else {
@@ -43,54 +45,54 @@ class EmojiCharacter {
       // For our purposes, we don't care about the variation selector or the
       // zero-width joiner, so we'll discard them (if present) and get the
       // remaining codepoints.
-      const VARIATION_SELECTOR_16 = '\ufe0f'
-      const ZERO_WIDTH_JOINER = '\u200d'
+      const VARIATION_SELECTOR_16 = "\ufe0f"
+      const ZERO_WIDTH_JOINER = "\u200d"
 
       const parts = [...this.character]
       const relevantParts = parts.filter(
-        (part) => (part !== VARIATION_SELECTOR_16 && part !== ZERO_WIDTH_JOINER)
+        (part) => part !== VARIATION_SELECTOR_16 && part !== ZERO_WIDTH_JOINER,
       )
 
-      const codePointHexValues = relevantParts.map(
-        (part) => part.codePointAt(0).toString(16)
+      const codePointHexValues = relevantParts.map((part) =>
+        part.codePointAt(0).toString(16),
       )
 
       return codePointHexValues
     }
   }
 
-  toLaunchbarItem () {
+  toLaunchbarItem() {
     return {
       title: this.launchbarItemTitle(),
       label: this.launchbarItemLabel(),
-      action: 'paste',
+      action: "paste",
       actionArgument: this.characterOrhumanizedName(),
-      icon: this.launchbarIcon()
+      icon: this.launchbarIcon(),
     }
   }
 
-  launchbarItemTitle () {
+  launchbarItemTitle() {
     return this.humanizedName
   }
 
-  launchbarItemLabel () {
+  launchbarItemLabel() {
     if (this.isUnicode()) {
-      return ''
+      return ""
     } else {
-      return 'custom'
+      return "custom"
     }
   }
 
-  launchbarIcon () {
+  launchbarIcon() {
     if (this.isUnicode()) {
-      const iconFileBasename = this.unicodeCodePoints.join('-')
-      return this.resourcesPath + 'unicode/' + iconFileBasename + '.png'
+      const iconFileBasename = this.unicodeCodePoints.join("-")
+      return this.resourcesPath + "unicode/" + iconFileBasename + ".png"
     } else {
-      return this.resourcesPath + this.name + '.png'
+      return this.resourcesPath + this.name + ".png"
     }
   }
 
-  characterOrhumanizedName () {
+  characterOrhumanizedName() {
     if (this.character != null) {
       return this.character
     } else {
@@ -98,9 +100,11 @@ class EmojiCharacter {
     }
   }
 
-  isUnicode () {
+  isUnicode() {
     return this.unicodeCodePoints.length > 0
   }
 }
 
-if (typeof module !== 'undefined') { module.exports.EmojiCharacter = EmojiCharacter }
+if (typeof module !== "undefined") {
+  module.exports.EmojiCharacter = EmojiCharacter
+}
