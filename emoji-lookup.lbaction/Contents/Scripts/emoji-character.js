@@ -66,7 +66,7 @@ class EmojiCharacter {
       title: this.launchbarItemTitle(),
       label: this.launchbarItemLabel(),
       action: "paste",
-      actionArgument: this.characterOrhumanizedName(),
+      actionArgument: this.characterOrHumanizedName(),
       icon: this.launchbarIcon(),
     }
   }
@@ -92,7 +92,7 @@ class EmojiCharacter {
     }
   }
 
-  characterOrhumanizedName() {
+  characterOrHumanizedName() {
     if (this.character != null) {
       return this.character
     } else {
