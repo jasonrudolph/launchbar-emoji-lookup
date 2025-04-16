@@ -1,0 +1,6 @@
+#!/bin/bash
+
+set -xe
+
+npm install
+npx prettier --check "**/*.js"
