@@ -25,14 +25,12 @@ describe("EmojiCharacter", () => {
       let character = new EmojiCharacter({
         name: "grinning_face_with_sweat",
         metadata: dictionary["grinning_face_with_sweat"],
-        resourcesPath: "/path/to/resources/",
       })
       assert.equal(character.humanizedName, "Grinning Face With Sweat")
 
       character = new EmojiCharacter({
         name: "keycap_",
         metadata: dictionary["keycap_"],
-        resourcesPath: "/path/to/resources/",
       })
       assert.equal(character.humanizedName, "Keycap")
     })
@@ -43,7 +41,6 @@ describe("EmojiCharacter", () => {
       const character = new EmojiCharacter({
         name: "collision",
         metadata: dictionary["collision"],
-        resourcesPath: "/path/to/resources/",
       })
       assert.equal(character.launchbarItemIcon(), "💥")
     })
@@ -52,7 +49,6 @@ describe("EmojiCharacter", () => {
       const character = new EmojiCharacter({
         name: "woman_detective",
         metadata: dictionary["woman_detective"],
-        resourcesPath: "/path/to/resources/",
       })
       assert.equal(character.launchbarItemIcon(), "🕵️‍♀️")
     })

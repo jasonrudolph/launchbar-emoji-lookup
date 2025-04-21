@@ -1,10 +1,9 @@
 /* global Action */
 
 class EmojiCharacter {
-  constructor({ name, metadata, resourcesPath }) {
+  constructor({ name, metadata }) {
     this.name = name
     this.data = metadata
-    this.resourcesPath = resourcesPath || Action.path + "/Contents/Resources/" // TODO: Remove this obsolete property
   }
 
   get character() {
