@@ -6,7 +6,7 @@ const {
 } = require("../emoji-lookup.lbaction/Contents/Scripts/emoji-dictionary.js")
 const emojilibDataPath = path.join(
   __dirname,
-  "../emoji-lookup.lbaction/Contents/vendor/emojilib/emoji-en-US.json"
+  "../emoji-lookup.lbaction/Contents/vendor/emojilib/emoji-en-US.json",
 )
 
 describe("getDictionary", () => {
@@ -40,5 +40,20 @@ describe("getDictionary", () => {
     const keywords = object.keywords
     assert.ok(keywords.includes("silly"))
     assert.ok(keywords.includes("flipped"))
+  })
+
+  it("handles multi-word emoji names when the words are separated with spaces", () => {
+    // Verify that emojilib has the test character registered under the expected name
+    assert.equal(nameAndKeywordsByChar["🫠"][0], "melting face")
+
+    const dictionary = getDictionary(nameAndKeywordsByChar)
+
+    const object = dictionary["melting_face"]
+    assert.ok(object)
+    assert.equal(object.char, "🫠")
+
+    const keywords = object.keywords
+    assert.ok(keywords.includes("hot"))
+    assert.ok(keywords.includes("heat"))
   })
 })

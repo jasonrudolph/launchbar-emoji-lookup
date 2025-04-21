@@ -18,7 +18,7 @@
 function getDictionary(nameAndKeywordsByChar) {
   const dictionary = {}
   for (const char in nameAndKeywordsByChar) {
-    const name = nameAndKeywordsByChar[char][0]
+    const name = nameAndKeywordsByChar[char][0].replace(/\s+/g, "_")
     const keywords = nameAndKeywordsByChar[char].slice(1)
     dictionary[name] = { char: char, keywords: keywords }
   }
