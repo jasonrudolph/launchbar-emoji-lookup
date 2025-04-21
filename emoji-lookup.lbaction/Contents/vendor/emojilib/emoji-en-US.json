@@ -9198,7 +9198,8 @@
     "delete",
     "remove",
     "cancel",
-    "red"
+    "red",
+    "x"
   ],
   "❎": [
     "cross_mark_button",
