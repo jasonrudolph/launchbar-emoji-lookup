@@ -4,7 +4,7 @@ class EmojiCharacter {
   constructor({ name, metadata, resourcesPath }) {
     this.name = name
     this.data = metadata
-    this.resourcesPath = resourcesPath || Action.path + "/Contents/Resources/"
+    this.resourcesPath = resourcesPath || Action.path + "/Contents/Resources/" // TODO: Remove this obsolete property
   }
 
   get character() {
@@ -50,11 +50,11 @@ class EmojiCharacter {
 
       const parts = [...this.character]
       const relevantParts = parts.filter(
-        (part) => part !== VARIATION_SELECTOR_16 && part !== ZERO_WIDTH_JOINER,
+        (part) => part !== VARIATION_SELECTOR_16 && part !== ZERO_WIDTH_JOINER
       )
 
       const codePointHexValues = relevantParts.map((part) =>
-        part.codePointAt(0).toString(16),
+        part.codePointAt(0).toString(16)
       )
 
       return codePointHexValues
@@ -84,12 +84,7 @@ class EmojiCharacter {
   }
 
   launchbarItemIcon() {
-    if (this.isUnicode()) {
-      const iconFileBasename = this.unicodeCodePoints.join("-")
-      return this.resourcesPath + "unicode/" + iconFileBasename + ".png"
-    } else {
-      return this.resourcesPath + this.name + ".png"
-    }
+    return this.character
   }
 
   characterOrHumanizedName() {
