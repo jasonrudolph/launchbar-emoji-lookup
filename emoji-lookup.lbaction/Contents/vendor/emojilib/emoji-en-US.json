@@ -295,7 +295,8 @@
     "scepticism",
     "disapproval",
     "disbelief",
-    "surprise"
+    "surprise",
+    "suspicious"
   ],
   "😐": [
     "neutral_face",
@@ -314,8 +315,7 @@
   ],
   "😶": [
     "face_without_mouth",
-    "face",
-    "hellokitty"
+    "face"
   ],
   "😏": [
     "smirking_face",
@@ -336,6 +336,7 @@
     "unimpressed",
     "skeptical",
     "dubious",
+    "ugh",
     "side_eye"
   ],
   "🙄": [
@@ -623,6 +624,7 @@
   ],
   "😭": [
     "loudly_crying_face",
+    "sobbing",
     "face",
     "cry",
     "tears",
@@ -738,7 +740,8 @@
     "dead",
     "skeleton",
     "creepy",
-    "death"
+    "death",
+    "dead"
   ],
   "☠️": [
     "skull_and_crossbones",
@@ -772,8 +775,7 @@
     "creepy",
     "devil",
     "demon",
-    "japanese",
-    "ogre"
+    "japanese_ogre"
   ],
   "👺": [
     "goblin",
@@ -783,8 +785,7 @@
     "monster",
     "scary",
     "creepy",
-    "japanese",
-    "goblin"
+    "japanese_goblin"
   ],
   "👻": [
     "ghost",
@@ -1048,7 +1049,8 @@
     "quiz",
     "test",
     "pass",
-    "hundred"
+    "hundred",
+    "100"
   ],
   "💢": [
     "anger_symbol",
@@ -1060,8 +1062,8 @@
     "bomb",
     "explode",
     "explosion",
-    "collision",
-    "blown"
+    "blown",
+    "boom"
   ],
   "💫": [
     "dizzy",
@@ -1139,6 +1141,7 @@
   ],
   "👋": [
     "waving_hand",
+    "wave",
     "hands",
     "gesture",
     "goodbye",
@@ -1368,11 +1371,13 @@
   ],
   "💅": [
     "nail_polish",
+    "nail_care",
     "beauty",
     "manicure",
     "finger",
     "fashion",
-    "nail"
+    "nail",
+    "slay"
   ],
   "🤳": [
     "selfie",
@@ -1459,7 +1464,6 @@
   ],
   "👄": [
     "mouth",
-    "mouth",
     "kiss"
   ],
   "👶": [
@@ -1489,8 +1493,7 @@
   ],
   "🧑": [
     "person",
-    "gender-neutral",
-    "person"
+    "gender-neutral"
   ],
   "👱": [
     "person_blond_hair",
@@ -2130,8 +2133,7 @@
   "🕵️": [
     "detective",
     "human",
-    "spy",
-    "detective"
+    "spy"
   ],
   "🕵️‍♂️": [
     "man_detective",
@@ -2818,20 +2820,27 @@
   ],
   "🚴": [
     "person_biking",
+    "bicycle",
+    "bike",
+    "cyclist",
     "sport",
     "move"
   ],
   "🚴‍♂️": [
     "man_biking",
-    "sports",
+    "bicycle",
     "bike",
+    "cyclist",
+    "sports",
     "exercise",
     "hipster"
   ],
   "🚴‍♀️": [
     "woman_biking",
-    "sports",
+    "bicycle",
     "bike",
+    "cyclist",
+    "sports",
     "exercise",
     "hipster",
     "woman",
@@ -2839,24 +2848,31 @@
   ],
   "🚵": [
     "person_mountain_biking",
+    "bicycle",
+    "bike",
+    "cyclist",
     "sport",
     "move"
   ],
   "🚵‍♂️": [
     "man_mountain_biking",
+    "bicycle",
+    "bike",
+    "cyclist",
     "transportation",
     "sports",
     "human",
-    "race",
-    "bike"
+    "race"
   ],
   "🚵‍♀️": [
     "woman_mountain_biking",
+    "bicycle",
+    "bike",
+    "cyclist",
     "transportation",
     "sports",
     "human",
     "race",
-    "bike",
     "woman",
     "female"
   ],
@@ -3653,8 +3669,7 @@
   "🐼": [
     "panda",
     "animal",
-    "nature",
-    "panda"
+    "nature"
   ],
   "🦥": [
     "sloth",
@@ -3725,7 +3740,6 @@
     "animal",
     "chicken",
     "bird",
-    "yellow",
     "canary"
   ],
   "🐥": [
@@ -3987,7 +4001,6 @@
   "🦗": [
     "cricket",
     "animal",
-    "cricket",
     "chirp"
   ],
   "🕷️": [
@@ -4400,8 +4413,7 @@
     "bread",
     "bakery",
     "schmear",
-    "jewish",
-    "bakery"
+    "jewish_bakery"
   ],
   "🥞": [
     "pancakes",
@@ -4595,12 +4607,15 @@
     "rice_cracker",
     "food",
     "japanese",
-    "snack"
+    "snack",
+    "senbei"
   ],
   "🍙": [
     "rice_ball",
     "food",
-    "japanese"
+    "japanese",
+    "onigiri",
+    "omusubi"
   ],
   "🍚": [
     "cooked_rice",
@@ -4637,6 +4652,7 @@
   ],
   "🍢": [
     "oden",
+    "skewer",
     "food",
     "japanese"
   ],
@@ -4816,7 +4832,9 @@
   "🍮": [
     "custard",
     "dessert",
-    "food"
+    "food",
+    "pudding",
+    "flan"
   ],
   "🍯": [
     "honey_pot",
@@ -5008,6 +5026,7 @@
     "globe_showing_europe_africa",
     "globe",
     "world",
+    "earth",
     "international"
   ],
   "🌎": [
@@ -5015,6 +5034,7 @@
     "globe",
     "world",
     "USA",
+    "earth",
     "international"
   ],
   "🌏": [
@@ -5022,6 +5042,7 @@
     "globe",
     "world",
     "east",
+    "earth",
     "international"
   ],
   "🌐": [
@@ -5600,8 +5621,8 @@
   ],
   "🚲": [
     "bicycle",
+    "bike",
     "sports",
-    "bicycle",
     "exercise",
     "hipster"
   ],
@@ -6433,7 +6454,8 @@
     "thunder",
     "weather",
     "lightning bolt",
-    "fast"
+    "fast",
+    "zap"
   ],
   "❄️": [
     "snowflake",
@@ -6802,7 +6824,8 @@
   "🤿": [
     "diving_mask",
     "sport",
-    "ocean"
+    "ocean",
+    "scuba"
   ],
   "🎽": [
     "running_shirt",
@@ -7139,8 +7162,7 @@
     "backpack",
     "student",
     "education",
-    "bag",
-    "backpack"
+    "bag"
   ],
   "👞": [
     "man_s_shoe",
@@ -7436,8 +7458,7 @@
     "telephone",
     "technology",
     "communication",
-    "dial",
-    "telephone"
+    "dial"
   ],
   "📞": [
     "telephone_receiver",
@@ -7470,7 +7491,6 @@
   "💻": [
     "laptop",
     "technology",
-    "laptop",
     "screen",
     "display",
     "monitor"
@@ -7564,8 +7584,7 @@
     "technology",
     "program",
     "oldschool",
-    "show",
-    "television"
+    "show"
   ],
   "📷": [
     "camera",
@@ -7989,7 +8008,6 @@
   ],
   "📅": [
     "calendar",
-    "calendar",
     "schedule"
   ],
   "📆": [
@@ -8096,9 +8114,6 @@
     "scissors",
     "stationery",
     "cut",
-    "black",
-    "cutting",
-    "tool",
     "snip"
   ],
   "🗃️": [
@@ -8193,7 +8208,6 @@
     "pistol",
     "violence",
     "weapon",
-    "pistol",
     "revolver"
   ],
   "🏹": [
@@ -8437,7 +8451,6 @@
     "cigarette",
     "kills",
     "tobacco",
-    "cigarette",
     "joint",
     "smoke"
   ],
@@ -8465,8 +8478,7 @@
   "🗿": [
     "moai",
     "rock",
-    "easter island",
-    "moai"
+    "easter island"
   ],
   "🏧": [
     "atm_sign",
@@ -8597,6 +8609,9 @@
   ],
   "🚳": [
     "no_bicycles",
+    "no_bikes",
+    "bicycle",
+    "bike",
     "cyclist",
     "prohibited",
     "circle"
@@ -8906,8 +8921,7 @@
     "sign",
     "zodiac",
     "purple-square",
-    "astrology",
-    "scorpio"
+    "astrology"
   ],
   "♐": [
     "sagittarius",
@@ -9185,7 +9199,8 @@
     "delete",
     "remove",
     "cancel",
-    "red"
+    "red",
+    "x"
   ],
   "❎": [
     "cross_mark_button",
@@ -9259,7 +9274,8 @@
   "‼️": [
     "double_exclamation_mark",
     "exclamation",
-    "surprise"
+    "surprise",
+    "bang"
   ],
   "⁉️": [
     "exclamation_question_mark",
@@ -9341,81 +9357,96 @@
     "0",
     "numbers",
     "blue-square",
-    "null"
+    "null",
+    "zero"
   ],
   "1️⃣": [
     "keycap_1",
     "blue-square",
     "numbers",
-    "1"
+    "1",
+    "one"
   ],
   "2️⃣": [
     "keycap_2",
     "numbers",
     "2",
     "prime",
-    "blue-square"
+    "blue-square",
+    "two"
   ],
   "3️⃣": [
     "keycap_3",
     "3",
     "numbers",
     "prime",
-    "blue-square"
+    "blue-square",
+    "three"
   ],
   "4️⃣": [
     "keycap_4",
     "4",
     "numbers",
-    "blue-square"
+    "blue-square",
+    "four"
   ],
   "5️⃣": [
     "keycap_5",
     "5",
     "numbers",
     "blue-square",
-    "prime"
+    "prime",
+    "five"
   ],
   "6️⃣": [
     "keycap_6",
     "6",
     "numbers",
-    "blue-square"
+    "blue-square",
+    "six"
   ],
   "7️⃣": [
     "keycap_7",
     "7",
     "numbers",
     "blue-square",
-    "prime"
+    "prime",
+    "seven"
   ],
   "8️⃣": [
     "keycap_8",
     "8",
     "blue-square",
-    "numbers"
+    "numbers",
+    "eight"
   ],
   "9️⃣": [
     "keycap_9",
     "blue-square",
     "numbers",
-    "9"
+    "9",
+    "nine"
   ],
   "🔟": [
     "keycap_10",
     "numbers",
     "10",
-    "blue-square"
+    "blue-square",
+    "ten"
   ],
   "🔠": [
     "input_latin_uppercase",
     "alphabet",
     "words",
+    "letters",
+    "uppercase",
     "blue-square"
   ],
   "🔡": [
     "input_latin_lowercase",
     "blue-square",
+    "letters",
+    "lowercase",
     "alphabet"
   ],
   "🔢": [
@@ -9894,12 +9925,10 @@
     "pride",
     "gay",
     "lgbt",
-    "glbt",
     "queer",
     "homosexual",
     "lesbian",
-    "bisexual",
-    "transgender"
+    "bisexual"
   ],
   "🏴‍☠️": [
     "pirate_flag",
@@ -10353,8 +10382,7 @@
     "flag",
     "country",
     "nation",
-    "banner",
-    "china"
+    "banner"
   ],
   "🇨🇴": [
     "flag_colombia",
@@ -10547,8 +10575,7 @@
     "flag",
     "nation",
     "country",
-    "banner",
-    "spain"
+    "banner"
   ],
   "🇪🇹": [
     "flag_ethiopia",
@@ -10603,8 +10630,7 @@
     "flag",
     "nation",
     "country",
-    "banner",
-    "micronesia"
+    "banner"
   ],
   "🇫🇴": [
     "flag_faroe_islands",
@@ -10623,8 +10649,7 @@
     "nation",
     "france",
     "french",
-    "country",
-    "france"
+    "country"
   ],
   "🇬🇦": [
     "flag_gabon",
@@ -10946,8 +10971,7 @@
     "flag",
     "nation",
     "country",
-    "banner",
-    "iran"
+    "banner"
   ],
   "🇮🇸": [
     "flag_iceland",
@@ -10964,8 +10988,7 @@
     "flag",
     "nation",
     "country",
-    "banner",
-    "italy"
+    "banner"
   ],
   "🇯🇪": [
     "flag_jersey",
@@ -11237,8 +11260,7 @@
     "flag",
     "nation",
     "country",
-    "banner",
-    "moldova"
+    "banner"
   ],
   "🇲🇪": [
     "flag_montenegro",
@@ -12034,8 +12056,7 @@
     "flag",
     "nation",
     "country",
-    "banner",
-    "turkey"
+    "banner"
   ],
   "🇹🇹": [
     "flag_trinidad_tobago",
@@ -12072,8 +12093,7 @@
     "flag",
     "nation",
     "country",
-    "banner",
-    "tanzania"
+    "banner"
   ],
   "🇺🇦": [
     "flag_ukraine",
@@ -12611,10 +12631,14 @@
   ],
   "⚧️": [
     "transgender symbol",
+    "transgender",
     "lgbtq"
   ],
   "🏳️‍⚧️": [
     "transgender flag",
+    "transgender",
+    "flag",
+    "pride",
     "lgbtq"
   ],
   "😶‍🌫️": [
@@ -12856,5 +12880,124 @@
   "🟰": [
     "heavy equals sign",
     "math"
+  ],
+  "🫨": [
+    "shaking face",
+    "dizzy",
+    "shock",
+    "blurry",
+    "earthquake"
+  ],
+  "🩷": [
+    "pink heart",
+    "valentines"
+  ],
+  "🩵": [
+    "light blue heart",
+    "ice",
+    "baby blue"
+  ],
+  "🩶": [
+    "grey heart",
+    "silver",
+    "monochrome"
+  ],
+  "🫷": [
+    "leftwards pushing hand",
+    "highfive",
+    "pressing",
+    "stop"
+  ],
+  "🫸": [
+    "rightwards pushing hand",
+    "highfive",
+    "pressing",
+    "stop"
+  ],
+  "🫎": [
+    "moose",
+    "shrek",
+    "canada",
+    "sweden",
+    "sven",
+    "cool"
+  ],
+  "🫏": [
+    "donkey",
+    "eeyore",
+    "mule"
+  ],
+  "🪽": [
+    "wing",
+    "angel",
+    "birds",
+    "flying"
+  ],
+  "🐦‍⬛": [
+    "black bird",
+    "crow"
+  ],
+  "🪿": [
+    "goose",
+    "silly",
+    "jemima",
+    "goosebumps"
+  ],
+  "🪼": [
+    "jellyfish",
+    "sting",
+    "tentacles"
+  ],
+  "🪻": [
+    "hyacinth",
+    "flower",
+    "lavender"
+  ],
+  "🫚": [
+    "ginger root",
+    "spice",
+    "yellow",
+    "cooking",
+    "gingerbread"
+  ],
+  "🫛": [
+    "pea pod",
+    "cozy",
+    "green"
+  ],
+  "🪭": [
+    "folding hand fan",
+    "flamenco",
+    "hot"
+  ],
+  "🪮": [
+    "hair pick",
+    "afro",
+    "comb"
+  ],
+  "🪇": [
+    "maracas",
+    "music",
+    "instrument",
+    "percussion"
+  ],
+  "🪈": [
+    "flute",
+    "bamboo",
+    "music",
+    "instrument",
+    "pied piper"
+  ],
+  "🪯": [
+    "khanda",
+    "Sikhism",
+    "religion"
+  ],
+  "🛜": [
+    "wireless",
+    "wifi",
+    "internet",
+    "contactless",
+    "signal"
   ]
 }
