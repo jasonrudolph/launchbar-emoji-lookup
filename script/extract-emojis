@@ -1,5 +1,0 @@
-#!/bin/sh
-
-gem install gemoji --version=3.0.0
-
-gemoji extract ./emoji-lookup.lbaction/Contents/Resources/
