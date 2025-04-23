@@ -9,7 +9,7 @@ const {
 } = require("../emoji-lookup.lbaction/Contents/Scripts/emoji-dictionary.js")
 const emojilibDataPath = path.join(
   __dirname,
-  "../emoji-lookup.lbaction/Contents/vendor/emojilib/emoji-en-US.json"
+  "../emoji-lookup.lbaction/Contents/vendor/emojilib/emoji-en-US.json",
 )
 
 describe("EmojiCharacter", () => {
