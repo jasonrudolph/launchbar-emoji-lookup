@@ -17,6 +17,6 @@
   },
   "homepage": "https://github.com/jasonrudolph/launchbar-emoji-lookup#readme",
   "devDependencies": {
-    "mocha": "^11.7.5"
+    "mocha": "^12.0.0-beta-10"
   }
 }
